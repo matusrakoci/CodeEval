@@ -3,7 +3,7 @@ import java.io.*;
 
 class Main { 
 
-	private static final Comparator<String> comparator = new Comparator<String>() { 
+	private static final Comparator<String> comparator = new Comparator<>() { 
 	
 		public int compare(String f, String t) { 
 			return Integer.compare(f.length(), t.length());
@@ -11,14 +11,14 @@ class Main {
 
 	};
 
-	public static void main(String... args) throws Throwable { 
+	public static void main(String[] args) throws Throwable { 
 
 		Scanner input = new Scanner(new File(args[0]));
 
 		int count = input.nextInt();
 		input.nextLine();
 
-		List<String> list = new ArrayList<String>();
+		List<String> list = new ArrayList<>();
 		while(input.hasNext()) 
 			list.add(input.nextLine());
 
